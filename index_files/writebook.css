@@ -1,0 +1,186 @@
+html.writebook {
+  background: var(--color-grey-lighter);
+}
+
+html.writebook body {
+  background: var(--color-grey-lighter);
+  color: var(--color-grey);
+}
+
+html.writebook a,
+html.writebook b,
+html.writebook strong {
+  color: var(--color-grey-dark);
+}
+
+html.writebook code {
+  background: rgba(var(--rgb-grey-dark), 0.075);
+  color: var(--color-grey-dark);
+}
+
+html.writebook .nav-underlay {
+  background: rgba(var(--rgb-grey-lighter), 0.92);
+}
+
+html.writebook .nav__logo a,
+html.writebook .nav__logo a span {
+  color: var(--color-grey-dark);
+}
+
+html.writebook .nav__links dt a {
+  color: var(--color-grey-dark);
+}
+
+html.writebook .nav__links dt:before {
+  color: rgba(var(--rgb-grey-dark), 0.2);
+}
+
+html.writebook .nav__links dd a {
+  color: rgba(var(--rgb-grey-dark), 0.65);
+}
+
+html.writebook .nav__links dd.selected a {
+  color: var(--color-grey-dark);
+}
+
+html.writebook .nav__toggle label {
+  color: var(--color-grey-dark);
+}
+
+html.writebook .nav--product {
+  background: rgba(var(--rgb-white), 0.75);
+  box-shadow: 0 1px 0 0 rgba(var(--rgb-grey), 0.075);
+}
+
+@media(hover: hover) {
+
+  html.writebook .nav__links dt a:focus,
+  html.writebook .nav__links dt a:hover,
+  html.writebook .nav__links dd:not(.selected) a:focus,
+  html.writebook .nav__links dd:not(.selected) a:hover,
+  html.writebook .nav__links dd label:focus,
+  html.writebook .nav__links dd label:hover,
+  html.writebook .nav__toggle label:focus,
+  html.writebook .nav__toggle label:hover {
+    color: var(--color-grey-dark);
+  }
+
+}
+
+html.writebook .product__header h1,
+html.writebook .product__header h2 {
+  color: var(--color-grey-dark);
+}
+
+html.writebook .product__content h3,
+html.writebook .product__content h4 {
+  color: var(--color-grey-dark);
+}
+
+html.writebook .buy__tab {
+  background: var(--color-white);
+  box-shadow:
+    0 0 0 1px rgba(var(--rgb-grey-dark), 0.05),
+    0 0.1em 2.8em -0.8em rgba(var(--rgb-grey-dark), 0.1),
+    0 0.2em 3.2em -1.2em rgba(var(--rgb-grey-dark), 0.2),
+    0 0.4em 2.0em -1.2em rgba(var(--rgb-grey-dark), 0.3),
+    0 0.6em 2.4em -1.6em rgba(var(--rgb-grey-dark), 0.4),
+    0 0.8em 2.8em -2.0em rgba(var(--rgb-grey-dark), 0.5)
+  ;
+}
+
+html.writebook .buy__header {
+  background: rgba(var(--rgb-grey-lighter), 0.25);
+  box-shadow: 0 1px 0 0 rgba(var(--rgb-grey), 0.075);
+}
+
+html.writebook .buy__header dl {
+  color: var(--color-grey-dark);
+}
+
+html.writebook .buy__content {
+  color: var(--color-grey);
+}
+
+html.writebook .buy__content h4,
+html.writebook .buy__content b,
+html.writebook .buy__content strong {
+  color: var(--color-grey-dark);
+}
+
+html.writebook .version a,
+html.writebook .version sup {
+  border-color: var(--color-grey-dark);
+  color: var(--color-grey-dark);
+}
+
+@media(hover: hover) {
+
+  html.writebook .version a:focus,
+  html.writebook .version a:hover {
+    background: var(--color-grey-dark);
+    color: var(--color-white);
+  }
+
+}
+
+html.writebook .legal p a,
+html.writebook .legal p b {
+  color: var(--color-grey-dark);
+}
+
+html.writebook .docs section {
+  border-color: rgba(var(--rgb-grey-light), 0.2);
+}
+
+html.writebook .docs section header h2,
+html.writebook .docs section header time {
+  color: var(--color-grey-dark);
+}
+
+html.writebook .docs section article h1,
+html.writebook .docs section article h2,
+html.writebook .docs section article h3,
+html.writebook .docs section article h4,
+html.writebook .docs section article h5,
+html.writebook .docs section article h6,
+html.writebook .docs section article a {
+  color: var(--color-grey-dark);
+}
+
+html.writebook .video__source button {
+  background: linear-gradient(
+    135deg,
+    rgba(var(--rgb-grey), 0.3) 0,
+    rgba(var(--rgb-grey), 0) 100%
+  );
+}
+
+html.writebook .video.video-zoom-active {
+  background: rgba(var(--rgb-grey-lighter), 0.96);
+}
+
+html.writebook .image figure img {
+  box-shadow:
+    0 0 0 1px rgba(var(--rgb-black), 0.05),
+    0 0.1em 2.8em -0.8em rgba(var(--rgb-black), 0.05),
+    0 0.2em 3.2em -1.2em rgba(var(--rgb-black), 0.15),
+    0 0.4em 2.0em -1.2em rgba(var(--rgb-black), 0.25),
+    0 0.6em 2.4em -1.6em rgba(var(--rgb-black), 0.35),
+    0 0.8em 2.8em -2.0em rgba(var(--rgb-black), 0.45)
+  ;
+}
+
+html.writebook .image figure figcaption {
+  color: var(--color-grey);
+}
+
+html.writebook .image--no-border figure img {
+  border-radius: initial;
+  box-shadow: none;
+  filter: drop-shadow(0 0.5em 0.7em rgba(var(--rgb-black), 0.3));
+}
+
+html.writebook .image.image-zoom-active {
+  background: rgba(var(--rgb-grey-lighter), 0.96);
+}

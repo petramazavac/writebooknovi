@@ -1,0 +1,10 @@
+import * as image from './modules/image.js';
+import * as video from './modules/video.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  image.ready();
+
+  video.ready();
+
+});

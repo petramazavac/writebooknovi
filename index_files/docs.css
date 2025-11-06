@@ -1,0 +1,125 @@
+.docs {
+  display: flex;
+  flex-direction: column;
+  gap: 3.25em;
+  margin-top: -2.1em;
+}
+
+.docs section {
+  border-top: 1px solid rgba(var(--rgb-blue-light), 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1.125em;
+  padding-bottom: 0.075em;
+  padding-top: 1.2em;
+}
+
+.docs section header {
+  align-items: baseline;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.docs section header h2 {
+  color: var(--color-white);
+  font-family: var(--font-family-inter-display);
+  font-feature-settings: 'liga', 'dlig', 'ss03';
+  font-weight: 700;
+}
+
+.docs section header time {
+  color: var(--color-white);
+  font-family: var(--font-family-inter);
+  font-feature-settings: 'liga', 'dlig', 'ss03';
+  font-size: 50%;
+  font-weight: 700;
+}
+
+.docs section header a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.docs section article {
+  font-size: 75%;
+  letter-spacing: var(--letter-spacing);
+}
+
+.docs section article h1,
+.docs section article h2,
+.docs section article h3,
+.docs section article h4,
+.docs section article h5,
+.docs section article h6 {
+  --spacing: 1.725em;
+  color: var(--color-white);
+  font-family: var(--font-family-inter-display);
+  font-weight: 700;
+}
+
+.docs section article h1 a,
+.docs section article h2 a,
+.docs section article h3 a,
+.docs section article h4 a,
+.docs section article h5 a,
+.docs section article h6 a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.docs section article h1 + *,
+.docs section article h2 + *,
+.docs section article h3 + *,
+.docs section article h4 + *,
+.docs section article h5 + *,
+.docs section article h6 + * {
+  --spacing: 0.775em;
+}
+
+.docs section article h3 {
+  font-size: 85%;
+}
+
+.docs section article h3 + * {
+  --spacing: 0.55em;
+}
+
+.docs section article ul {
+  list-style: disc;
+  padding-left: 1.3em;
+}
+
+.docs section article ul li {
+  --spacing: 0.5em;
+}
+
+.docs section article ul li ul {
+  margin-top: 0.5em;
+}
+
+.docs section article ul li + li {
+  margin-top: var(--spacing, 0.5em);
+}
+
+.docs section article a {
+  color: var(--color-white);
+}
+
+.docs section article > * + * {
+  margin-top: var(--spacing, 1.3em);
+}
+
+@media(hover: hover) {
+
+  .docs section header a:focus,
+  .docs section header a:hover,
+  .docs section article a:focus,
+  .docs section article a:hover {
+    text-decoration: underline;
+  }
+
+}

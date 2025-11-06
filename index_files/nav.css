@@ -1,0 +1,252 @@
+.nav-active {
+  display: none;
+}
+
+.nav-active:checked ~ .nav-underlay,
+.nav-active:checked ~ .nav .nav__links dd {
+  display: flex;
+}
+
+@media(min-width: 64em) {
+
+  .nav-active:checked ~ .nav-underlay {
+    display: none;
+  }
+
+}
+
+.nav-underlay {
+  background: rgba(var(--rgb-blue), 0.92);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+@media(min-width: 64em) {
+
+  .nav-underlay {
+    display: none;
+  }
+
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.55em;
+  margin-top: 3.55em;
+}
+
+.nav__main {
+  display: flex;
+  flex: 1;
+  gap: 1em;
+  margin-inline: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  width: min(100%, 34.5em);
+}
+
+.nav__body {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5125em;
+  margin-top: 0.5125em;
+  width: 100%;
+}
+
+.nav__logo {
+  display: flex;
+}
+
+.nav__logo a {
+  align-items: center;
+  color: var(--color-white);
+  display: flex;
+  gap: 0.225em;
+  height: 1.375em;
+  text-decoration: none;
+}
+
+.nav__logo a svg {
+  height: 1.375em;
+  max-height: 1.375em;
+  width: auto;
+}
+
+.nav__logo a span {
+  color: var(--color-white);
+  display: block;
+  font-family: var(--font-family-inter-display);
+  font-feature-settings: 'case', 'cpsp', 'ss03';
+  font-size: 50%;
+  font-weight: 700;
+  letter-spacing: 0.0225em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.nav__links {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-family: var(--font-family-inter);
+  font-feature-settings: 'case', 'liga', 'dlig', 'ss03';
+  line-height: 1.375em;
+  white-space: nowrap;
+}
+
+.nav__links dt,
+.nav__links dd {
+  display: flex;
+  font-size: 50%;
+}
+
+.nav__links dt a,
+.nav__links dd a {
+  text-decoration: none;
+}
+
+.nav__links dt {
+  font-weight: 700;
+}
+
+.nav__links dt a {
+  color: var(--color-white);
+}
+
+.nav__links dt:before {
+  color: rgba(var(--rgb-blue-light), 0.3);
+  content: '/';
+  display: inline-flex;
+  font-weight: 600;
+  justify-content: center;
+  width: 1.375em;
+}
+
+.nav__links dd {
+  display: none;
+}
+
+.nav__links dd a {
+  color: rgba(var(--rgb-blue-light), 0.85);
+  cursor: pointer;
+  flex: 1;
+  font-weight: 400;
+  margin-left: 1.375em;
+}
+
+.nav__links dd.selected a {
+  color: var(--color-white);
+}
+
+.nav__toggle {
+  display: flex;
+  height: 1.375em;
+  line-height: 1.375em;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.nav__toggle label {
+  color: var(--color-white);
+  cursor: pointer;
+  font-family: var(--font-family-inter-display);
+  font-feature-settings: 'case', 'cpsp', 'ss03';
+  font-size: 50%;
+  font-weight: 700;
+  letter-spacing: 0.0225em;
+  margin-right: -1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.nav--product {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(var(--rgb-blue-dark), 0.3);
+  box-shadow: 0 1px 0 0 rgba(var(--rgb-blue-dark), 0.3);
+  left: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav--product .nav__main {
+  padding-left: 1em;
+  padding-right: 1em;
+  width: min(100%, 29em);
+}
+
+@media(hover: hover) {
+
+  .nav__links dt a:focus,
+  .nav__links dt a:hover,
+  .nav__links dd:not(.selected) a:focus,
+  .nav__links dd:not(.selected) a:hover,
+  .nav__links dd label:focus,
+  .nav__links dd label:hover,
+  .nav__toggle label:focus,
+  .nav__toggle label:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+  }
+
+}
+
+@media(min-width: 64em) {
+
+  .nav__main {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .nav__body {
+    flex: 1;
+    margin-right: 3.25em;
+    width: auto;
+  }
+
+  .nav__links {
+    flex-direction: row;
+    gap: 0.725em;
+    justify-content: flex-end;
+    line-height: 1.375em;
+    margin-right: -2em;
+  }
+
+  .nav__links dt {
+    margin-right: auto;
+  }
+
+  .nav__links dd {
+    display: flex;
+  }
+
+  .nav__links dd a {
+    margin-left: 0;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav--product .nav__main {
+    gap: 0;
+    padding-left: 3em;
+    padding-right: 3em;
+    width: min(100%, 46em);
+  }
+
+  .nav--product .nav__main:after {
+    content: '';
+    width: 12em;
+  }
+
+}

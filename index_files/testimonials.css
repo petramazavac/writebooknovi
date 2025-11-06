@@ -1,0 +1,112 @@
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.testimonials__testimonial {
+  display: inline-flex;
+}
+
+.testimonials__testimonial blockquote {
+  background: linear-gradient(
+    135deg,
+    rgba(var(--rgb-blue-light), 0.125) 0,
+    rgba(var(--rgb-blue-light), 0.025) 100%
+  );
+  border-radius: 0.3em;
+  box-shadow:
+    0 0 0 1px rgba(var(--rgb-black), 0.05),
+    0 0.2em 0.4em -0.4em rgba(var(--rgb-black), 0.15),
+    0 0.4em 0.8em -0.8em rgba(var(--rgb-black), 0.25),
+    0 0.6em 1.2em -1.2em rgba(var(--rgb-black), 0.35),
+    0 0.8em 1.6em -1.6em rgba(var(--rgb-black), 0.45)
+  ;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  padding: 1em 1.5em 1.5em 1.5em;
+}
+
+.testimonials__testimonial blockquote q {
+  font-size: 75%;
+  letter-spacing: var(--letter-spacing);
+  position: relative;
+}
+
+.testimonials__testimonial blockquote q mark {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--rgb-blue-darker), 0.45) 0,
+    rgba(var(--rgb-blue-darker), 0.25) 100%
+  );
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  color: var(--color-white);
+  display: inline;
+  font-weight: 700;
+}
+
+.testimonials__testimonial blockquote q:before {
+  color: rgba(var(--rgb-blue-light), 0.9);
+  content: '"';
+  font-size: 150%;
+  font-weight: 500;
+  position: absolute;
+  right: calc(100% + 0.075em);
+  top: -0.25em;
+}
+
+.testimonials__testimonial blockquote q:after {
+  content: '"';
+}
+
+.testimonials__testimonial blockquote cite {
+  align-items: center;
+  display: flex;
+  gap: 0.4em;
+}
+
+.testimonials__testimonial blockquote cite img {
+  border-radius: 100%;
+  outline: 1px dashed rgba(var(--rgb-blue-light), 0.4);
+  outline-offset: 0.1em;
+  overflow: hidden;
+  width: 1.4em;
+}
+
+.testimonials__testimonial blockquote cite dl {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-inter);
+  font-feature-settings: 'liga', 'dlig', 'ss03';
+  font-size: 50%;
+  font-weight: 700;
+  gap: 0.4em;
+  line-height: 1;
+}
+
+.testimonials__testimonial blockquote cite dl dt {
+  color: var(--color-white);
+}
+
+.testimonials__testimonial blockquote cite dl dd {
+  font-size: 90%;
+  font-weight: 400;
+}
+
+@media(min-width: 64em) {
+
+  .testimonials {
+    column-gap: 1em;
+    column-width: 12em;
+    display: initial;
+    flex-direction: initial;
+    margin: -1em -1.5em;
+  }
+
+  .testimonials__testimonial {
+    margin-top: 1em;
+  }
+
+}

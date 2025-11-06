@@ -1,0 +1,19 @@
+.signature {
+  --spacing: 1.4em;
+}
+
+.signature figure {
+  margin-left: -0.5em;
+  width: 6.6em;
+}
+
+.signature dl {
+  color: var(--color-white);
+  font-feature-settings: 'case';
+  font-size: 90%;
+  margin-top: 0.7em;
+}
+
+.signature dl dt {
+  font-weight: 700;
+}

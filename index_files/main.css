@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 3.075em;
+  margin-inline: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  width: min(100%, 34.5em);
+}
+
+.main--index {
+  margin-bottom: 6.1em;
+}
+
+.main--product {
+  margin-bottom: 3.55em;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+@media(min-width: 64em) {
+
+  .main {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .main--product {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}

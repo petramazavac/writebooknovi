@@ -1,0 +1,166 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 3.25em;
+}
+
+.page__header {
+  margin-top: -0.3em;
+}
+
+.page__header h1,
+.page__header h2 {
+  color: var(--color-white);
+  letter-spacing: normal;
+}
+
+.page__header h1 {
+  font-size: 175%;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.page__header h2 {
+  --spacing: 0.575em;
+  font-size: 140%;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.page__header a {
+  color: var(--color-white);
+  text-decoration-thickness: from-font;
+}
+
+.page__header > * + * {
+  margin-top: var(--spacing, 0.9em);
+}
+
+.page__content {
+  margin-top: -0.3em;
+}
+
+.page__content h3,
+.page__content h4 {
+  color: var(--color-white);
+  font-family: var(--font-family-inter-display);
+  font-feature-settings: 'liga', 'dlig', 'ss03';
+  letter-spacing: normal;
+}
+
+.page__content h3 a,
+.page__content h4 a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.page__content h3 {
+  --spacing: 2.7em;
+  font-size: 110%;
+  font-weight: 700;
+}
+
+.page__content h3 + * {
+  --spacing: 0.5875em;
+}
+
+.page__content h3 + h4 {
+  --spacing: 0.925em;
+}
+
+.page__content h4 {
+  --spacing: 1.475em;
+  font-size: 75%;
+  font-weight: 600;
+}
+
+.page__content h4 + * {
+  --spacing: 0.325em;
+}
+
+.page__content ol,
+.page__content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.575em;
+}
+
+.page__content ol li,
+.page__content ul li {
+  position: relative;
+  padding-left: 1.8em;
+}
+
+.page__content ol li ol,
+.page__content ol li ul,
+.page__content ul li ol,
+.page__content ul li ul {
+  margin-top: 0.575em;
+}
+
+.page__content ol li:before,
+.page__content ul li:before {
+  font-feature-settings: 'case', 'tnum';
+  left: 0;
+  position: absolute;
+  text-align: right;
+  top: 0;
+  width: 1.4em;
+}
+
+.page__content ol {
+  counter-reset: counter;
+}
+
+.page__content ol li {
+  counter-increment: counter;
+}
+
+.page__content ol li:before {
+  content: counter(counter) '.';
+}
+
+.page__content ul li:before {
+  content: '•';
+}
+
+.page__content ul.dashed {
+  gap: 0.325em;
+}
+
+.page__content ul.dashed li {
+  padding-left: 0.9em;
+}
+
+.page__content ul.dashed li:before {
+  content: '—';
+  left: 0;
+  opacity: 0.5;
+  width: auto;
+}
+
+.page__content > * + * {
+  margin-top: var(--spacing, 1.3em);
+}
+
+@media(min-width: 64em) {
+
+  .page__content ol li,
+  .page__content ul li {
+    padding-left: 0;
+  }
+
+  .page__content ol li ol,
+  .page__content ol li ul,
+  .page__content ul li ol,
+  .page__content ul li ul {
+    padding-left: 1.8em;
+  }
+
+  .page__content ol li:before,
+  .page__content ul li:before {
+    left: -1.8em;
+  }
+
+}

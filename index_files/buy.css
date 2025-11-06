@@ -1,0 +1,223 @@
+.buy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+  margin-inline: auto;
+  pointer-events: auto;
+  width: min(100%, 20em);
+}
+
+.buy__tab {
+  background: var(--color-blue-lighter);
+  border-radius: 0.4em;
+  box-shadow:
+    0 0 0 1px rgba(var(--rgb-black), 0.1),
+    0 0.1em 2.8em -0.8em rgba(var(--rgb-black), 0.1),
+    0 0.2em 3.2em -1.2em rgba(var(--rgb-black), 0.2),
+    0 0.4em 2.0em -1.2em rgba(var(--rgb-black), 0.3),
+    0 0.6em 2.4em -1.6em rgba(var(--rgb-black), 0.4),
+    0 0.8em 2.8em -2.0em rgba(var(--rgb-black), 0.5)
+  ;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.buy__header {
+  align-items: center;
+  background: var(--color-white);
+  box-shadow: 0 1px 0 0 rgba(var(--rgb-blue), 0.1);
+  display: flex;
+  gap: 0.3em;
+  height: 2.4em;
+  margin-bottom: 1.1em;
+  overflow: hidden;
+  padding-left: 0.9em;
+  padding-right: 0.9em;
+}
+
+.buy__header figure {
+  width: 1.3em;
+}
+
+.buy__header dl {
+  align-items: center;
+  color: var(--color-black);
+  display: flex;
+  flex: 1;
+  font-family: var(--font-family-inter-display);
+  font-feature-settings: 'case', 'liga', 'dlig', 'ss03';
+  font-size: 70%;
+  font-weight: 700;
+  justify-content: space-between;
+  line-height: 1;
+}
+
+.buy__content {
+  color: var(--color-black);
+  font-family: var(--font-family-inter);
+  font-feature-settings: 'liga', 'dlig', 'ss03';
+  font-weight: 400;
+  line-height: 1.5;
+  margin: -0.16em 1.1em -0.185em 1.1em;
+}
+
+.buy__content h4 {
+  font-size: 55%;
+  font-weight: 700;
+}
+
+.buy__content h4 + * {
+  --spacing: 0.425em;
+}
+
+.buy__content p {
+  font-size: 50%;
+}
+
+.buy__content ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 50%;
+  gap: 0.3em;
+}
+
+.buy__content ul li.icon {
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 1.4em 1.5em;
+  padding-left: 2em;
+}
+
+.buy__content ul li.icon--video {
+  background-image: url('../images/icon-video.svg');
+}
+
+.buy__content ul li.icon--updates {
+  background-image: url('../images/icon-updates.svg');
+}
+
+.buy__content ul li.icon--github {
+  background-image: url('../images/icon-github.svg');
+}
+
+.buy__content a {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+.buy__content b,
+.buy__content strong {
+  color: var(--color-black);
+  letter-spacing: inherit;
+}
+
+.buy__content > * + * {
+  margin-top: var(--spacing, 1.3em);
+}
+
+.buy__button {
+  display: flex;
+  flex-direction: column;
+  margin: 1.1em 0.3em 0.3em 0.3em;
+}
+
+.buy__button a {
+  background: linear-gradient(
+    0deg,
+    var(--color-green-dark) 0,
+    var(--color-green) 100%
+  );
+  border-radius: 0.25em;
+  box-shadow:
+    inset 0 0 0 1px rgba(var(--rgb-black), 0.05),
+    inset 0 2px 0 0 rgba(var(--rgb-white), 0.15),
+    inset 0 0 0 0 rgba(var(--rgb-white), 0)
+  ;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.buy__button a span {
+  color: var(--color-white);
+  font-family: var(--font-family-inter-display);
+  font-feature-settings: 'liga', 'dlig', 'ss03';
+  font-size: 65%;
+  font-weight: 700;
+  line-height: 1em;
+  padding: 1.175em;
+  pointer-events: none;
+  text-shadow: 0 1px 0 rgba(var(--rgb-black), 0.05);
+}
+
+.buy__notes {
+  font-family: var(--font-family-inter);
+  font-feature-settings: 'liga', 'dlig', 'ss03';
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: -0.1675em;
+  margin-top: -0.1925em;
+  text-align: center;
+}
+
+.buy__notes p {
+  font-size: 50%;
+}
+
+.buy__notes a {
+  text-decoration: none;
+}
+
+.buy__notes span {
+  display: inline-block;
+}
+
+@media(hover: hover) {
+
+  .buy__content a:focus,
+  .buy__content a:hover,
+  .buy__notes a:focus,
+  .buy__notes a:hover {
+    text-decoration: underline;
+  }
+
+  .buy__button a {
+    transition: box-shadow var(--transition);
+  }
+
+  .buy__button a span {
+    transition: text-shadow var(--transition);
+  }
+
+  .buy__button a:focus,
+  .buy__button a:hover {
+    box-shadow:
+      inset 0 0 0 1px rgba(var(--rgb-black), 0.1),
+      inset 0 2px 0 0 rgba(var(--rgb-white), 0.15),
+      inset 0 0.6em 1.3em -0.9em rgba(var(--rgb-white), 0.25)
+    ;
+  }
+
+  .buy__button a:focus span,
+  .buy__button a:hover span {
+    text-shadow: 0 1px 0 rgba(var(--rgb-black), 0.15);
+  }
+
+}
+
+@media(min-width: 64em) {
+
+  .buy {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 101;
+  }
+
+  .buy__tab {
+    border-radius: 0 0 0.4em 0.4em;
+  }
+
+}

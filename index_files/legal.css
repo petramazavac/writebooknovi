@@ -1,0 +1,95 @@
+.legal {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.55em;
+  margin-inline: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  width: min(100%, 34.5em);
+}
+
+.legal p {
+  font-family: var(--font-family-inter);
+  font-feature-settings: 'liga', 'dlig', 'ss03';
+  font-size: 50%;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: -0.325em;
+  margin-top: 0.1em;
+}
+
+.legal p a,
+.legal p b {
+  color: var(--color-white);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.legal p .icon {
+  align-items: center;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.legal p .icon svg {
+  height: 1.15em;
+  max-height: 1.15em;
+  width: auto;
+  vertical-align: middle;
+}
+
+.legal p .icon span {
+  margin-left: 0.25em;
+}
+
+.legal br {
+  display: none;
+}
+
+.legal--product {
+  margin-bottom: 0;
+  margin-inline: initial;
+  margin-top: -0.175em;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
+}
+
+@media(hover: hover) {
+
+  .legal a:focus,
+  .legal a:hover {
+    text-decoration: underline;
+  }
+
+}
+
+@media(min-width: 48em) {
+
+  .legal span {
+    display: inline-block;
+  }
+
+}
+
+@media(min-width: 64em) {
+
+  .legal {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .legal p {
+    font-size: 40%;
+  }
+
+  .legal br {
+    display: inline;
+  }
+
+  .legal--product {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}

@@ -1,0 +1,123 @@
+html {
+  background: var(--color-blue);
+  font-size: 16px;
+  min-height: -webkit-fill-available;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--font-size) * 3.4);
+}
+
+html.zoom-active {
+  overflow: hidden;
+}
+
+body {
+  background: var(--color-blue);
+  color: var(--color-blue-light);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-family);
+  font-feature-settings: 'liga', 'dlig';
+  font-size: var(--font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  min-height: 100vh;
+  -webkit-tap-highlight-color: rgba(var(--rgb-blue-light), 0);
+  text-rendering: optimizeLegibility;
+}
+
+@supports(-webkit-touch-callout: none) {
+
+  body {
+    min-height: -webkit-fill-available;
+  }
+
+}
+
+a {
+  color: var(--color-white);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.0625em;
+}
+
+b,
+strong {
+  color: var(--color-white);
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+img,
+source,
+video {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+video::cue {
+  font-family: var(--font-family-inter);
+  font-feature-settings: 'liga', 'dlig', 'ss03';
+  font-size: 80%;
+  font-weight: 600;
+  line-height: 1;
+}
+
+table {
+  background: rgba(var(--rgb-blue-light), 0.05);
+  border-collapse: collapse;
+  color: var(--color-white);
+  font-family: var(--font-family-inter);
+  font-feature-settings: 'liga', 'dlig', 'ss03';
+  font-weight: 400;
+  line-height: 1.5;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+table thead tr,
+table tbody tr:nth-of-type(even) {
+  background: rgba(var(--rgb-blue-light), 0.05);
+}
+
+table th,
+table td {
+  border: 2px solid var(--color-blue);
+  font-size: 55%;
+  padding: 0.9em 0.7em;
+}
+
+table th {
+  font-family: var(--font-family-inter-display);
+  font-feature-settings: 'liga', 'dlig', 'ss03';
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+code {
+  background: rgba(var(--rgb-blue-dark), 0.2);
+  border-radius: 0.1em;
+  color: var(--color-white);
+  display: inline-block;
+  font-family: var(--font-family-cascadia);
+  font-weight: 300;
+  font-size: 85%;
+  line-height: 1.1;
+  padding: 0.2em 0.3em 0.15em 0.3em;
+}
+
+.uppercase {
+  font-feature-settings: 'case', 'liga', 'dlig';
+  letter-spacing: normal;
+}
